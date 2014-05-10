@@ -1,0 +1,5 @@
+node_modules
+chatterbox-server-1/node_modules
+chatterbox-server-1/client/bower_components
+.DS_Store
+._.DS_Store

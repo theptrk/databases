@@ -1,0 +1,39 @@
+===== ===== ===== Raw Sql ===== ===== =====
+
+===== Variables =====
+var database-name = "messagedb"
+var table-name = "messages"
+
+===== Command Line =====
+
+* create new database
+- mysqladmin -u root create <database-name>
+
+* open database in mysql shell
+- mysql -u root <database>
+
+* Execute sql file from the command line by typing:
+- mysql -u root < schema.sql
+- to create the database and the tables.*/
+
+
+===== MySql Shell =====
+* create table
+- create table <table-name>
+    -> (username varchar(200),
+    -> roomname varchar(200),
+    -> text varchar(2000),
+    -> ID int(11) NOT NULL auto_increment,
+    -> PRIMARY KEY (ID));
+
+*- describe <table-name>
+*- show tables
+
+
+===== Root MySql Shell =====
+* open shell
+- mysql -u root
+
+*- show databases
+
+*- drop database <database-name>
