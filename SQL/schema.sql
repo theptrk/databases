@@ -19,7 +19,7 @@ DROP TABLE IF EXISTS `messages`;
 CREATE TABLE `messages` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
   `username` INTEGER NULL DEFAULT NULL,
-  `text` INTEGER NULL DEFAULT NULL,
+  `text` VARCHAR(500) NULL DEFAULT NULL,
   `roomname` INTEGER NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
@@ -33,6 +33,7 @@ DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
+  `username` VARCHAR(200) NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -45,7 +46,7 @@ DROP TABLE IF EXISTS `rooms`;
 
 CREATE TABLE `rooms` (
   `id` INTEGER NULL AUTO_INCREMENT DEFAULT NULL,
-  `message` INTEGER NULL DEFAULT NULL,
+  `roomname` VARCHAR(200) NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -55,7 +56,6 @@ CREATE TABLE `rooms` (
 
 ALTER TABLE `messages` ADD FOREIGN KEY (username) REFERENCES `users` (`id`);
 ALTER TABLE `messages` ADD FOREIGN KEY (roomname) REFERENCES `rooms` (`id`);
-ALTER TABLE `rooms` ADD FOREIGN KEY (message) REFERENCES `messages` (`id`);
 
 -- ---
 -- Table Properties
@@ -71,8 +71,8 @@ ALTER TABLE `rooms` ADD FOREIGN KEY (message) REFERENCES `messages` (`id`);
 
 -- INSERT INTO `messages` (`id`,`username`,`text`,`roomname`) VALUES
 -- ('','','','');
--- INSERT INTO `users` (`id`) VALUES
--- ('');
--- INSERT INTO `rooms` (`id`,`message`) VALUES
+-- INSERT INTO `users` (`id`,`username`) VALUES
+-- ('','');
+-- INSERT INTO `rooms` (`id`,`roomname`) VALUES
 -- ('','');
 
