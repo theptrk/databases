@@ -1,0 +1,22 @@
+{
+  "name": "databases",
+  "version": "0.0.1",
+  "description": "",
+  "main": "chatterbox-server-1/client/server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theptrk/2014-04-databases.git"
+  },
+  "author": "Patrick Tran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theptrk/2014-04-databases/issues"
+  },
+  "homepage": "https://github.com/theptrk/2014-04-databases",
+  "dependencies": {
+    "mysql": "~2.2.0"
+  }
+}
